@@ -166,7 +166,26 @@ function Edit(_ref) {
   const imageSizes = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
     return select(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.store).getSettings().imageSizes;
   }, []);
-  console.log(imageSizes);
+
+  const getImageSizeOptions = () => {
+    if (!imageObject) return [];
+    const options = [];
+    const sizes = imageObject.media_details.sizes;
+
+    for (const key in sizes) {
+      const size = sizes[key];
+      const imageSize = imageSizes.find(size => size.slug === key);
+
+      if (imageSize) {
+        options.push({
+          label: imageSize.name,
+          value: size.source_url
+        });
+      }
+    }
+
+    return options;
+  };
 
   const onChangeName = newName => {
     setAttributes({
@@ -211,6 +230,12 @@ function Edit(_ref) {
     });
   };
 
+  const onChangeImgSize = newURL => {
+    setAttributes({
+      url: newURL
+    });
+  };
+
   const onUploadError = message => {
     noticeOperations.removeAllNotices();
     noticeOperations.createErrorNotice(message);
@@ -244,15 +269,9 @@ function Edit(_ref) {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Image Settings", "team-members")
   }, id && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Image Size", "team-members"),
-    options: [{
-      label: "Size 1",
-      value: "Value 1"
-    }, {
-      label: "Size 2",
-      value: "Value 2"
-    }],
-    value: "Value 2",
-    onChange: value => console.log(value)
+    options: getImageSizeOptions(),
+    value: url,
+    onChange: onChangeImgSize
   }), url && !(0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_4__.isBlobURL)(url) && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextareaControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Alt Text", "team-members"),
     value: alt,

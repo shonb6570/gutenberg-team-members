@@ -4,7 +4,7 @@
  * Description:       Dynamic grid for site member profiles
  * Requires at least: 5.8
  * Requires PHP:      7.0
- * Version:           0.1.8
+ * Version:           0.1.9
  * Author:            Shaun Bolak
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

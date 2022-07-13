@@ -36,7 +36,22 @@ function Edit({ attributes, setAttributes, noticeOperations, noticeUI }) {
 		return select(blockEditorStore).getSettings().imageSizes;
 	}, []);
 
-	console.log(imageSizes);
+	const getImageSizeOptions = () => {
+		if (!imageObject) return [];
+		const options = [];
+		const sizes = imageObject.media_details.sizes;
+		for (const key in sizes) {
+			const size = sizes[key];
+			const imageSize = imageSizes.find((size) => size.slug === key);
+			if (imageSize) {
+				options.push({
+					label: imageSize.name,
+					value: size.source_url,
+				});
+			}
+		}
+		return options;
+	};
 
 	const onChangeName = (newName) => {
 		setAttributes({ name: newName });
@@ -63,6 +78,10 @@ function Edit({ attributes, setAttributes, noticeOperations, noticeUI }) {
 			id: undefined,
 			alt: "",
 		});
+	};
+
+	const onChangeImgSize = (newURL) => {
+		setAttributes({ url: newURL });
 	};
 
 	const onUploadError = (message) => {
@@ -103,18 +122,9 @@ function Edit({ attributes, setAttributes, noticeOperations, noticeUI }) {
 					{id && (
 						<SelectControl
 							label={__("Image Size", "team-members")}
-							options={[
-								{
-									label: "Size 1",
-									value: "Value 1",
-								},
-								{
-									label: "Size 2",
-									value: "Value 2",
-								},
-							]}
-							value="Value 2"
-							onChange={(value) => console.log(value)}
+							options={getImageSizeOptions()}
+							value={url}
+							onChange={onChangeImgSize}
 						/>
 					)}
 
