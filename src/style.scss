@@ -1,0 +1,61 @@
+$evbg-red: #d01f29;
+$evbg-orange: #f37120;
+$evbg-gray: #585858;
+$pacific: #0099dd;
+$gossamer: #0fa879;
+$atlantic: #495d6f;
+$fortress: #292d2f;
+
+$evbg-lato: "lato", sans-serif;
+
+.wp-block-evbg-team-members {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+	@for $i from 1 through 3 {
+		&.has-#{$i}-columns {
+			.wp-block-evbg-team-member {
+				width: calc(100% / #{$i} - 20px);
+			}
+		}
+	}
+	.wp-block-evbg-team-member {
+		margin: 10px;
+	}
+}
+
+.wp-block-evbg-team-member {
+	margin: 10px;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+
+	img {
+		margin-bottom: 20px;
+	}
+
+	h4 {
+		font-family: $evbg-lato;
+		color: $fortress;
+		font-weight: bold;
+		font-size: 22px;
+		margin: 0 auto;
+	}
+	p {
+		color: $fortress;
+		font-size: 16px;
+		font-weight: 300;
+		margin: 8px auto 5px auto;
+	}
+}
+
+// theme overrides
+
+.entry-content {
+	margin: 4em 0 0 !important;
+}
+
+footer.entry-footer {
+	margin-top: 10rem;
+}

@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "evbg/team-members",
+	"version": "0.1.0",
+	"title": "Team Members",
+	"category": "media",
+	"icon": "groups",
+	"description": "Dynamic grid for site member profiles",
+	"keywords": ["Team", "Members", "Profile"],
+	"supports": {
+		"html": false,
+		"algin": ["full", "wide"]
+	},
+	"textdomain": "team-members",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 2
+		}
+	}
+}

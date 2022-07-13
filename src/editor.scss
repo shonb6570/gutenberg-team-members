@@ -1,0 +1,94 @@
+$evbg-red: #d01f29;
+$evbg-orange: #f37120;
+$evbg-gray: #585858;
+$pacific: #0099dd;
+$gossamer: #0fa879;
+$atlantic: #495d6f;
+$fortress: #292d2f;
+
+$evbg-lato: "lato", sans-serif;
+
+$tablet: 640px;
+$desktop: 1024px;
+
+.wp-block-evbg-team-members {
+	display: block;
+	@for $i from 1 through 3 {
+		&.has-#{$i}-columns {
+			> .block-editor-inner-blocks > .block-editor-block-list__layout > {
+				[data-type="evbg/team-member"] {
+					width: 100%;
+					@media screen and (min-width: $tablet) {
+						width: 45%;
+					}
+					@media screen and (min-width: $desktop) {
+						width: calc(100% / #{$i} - 20px);
+					}
+				}
+
+				.block-list-appender {
+					align-self: stretch;
+					width: calc(100% / #{$i});
+					border: 1px dashed;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 290px;
+				}
+			}
+		}
+	}
+	> .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+
+		[data-type="evbg/team-member"] {
+			max-width: none;
+			margin: 0;
+		}
+		> [data-type="evbg/team-member"] {
+			margin: 10px;
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+
+			.block-editor-media-placeholder {
+				margin-bottom: 20px;
+			}
+
+			.wp-block-evbg-team-member-img {
+				position: relative;
+				margin-bottom: 20px;
+
+				&.is-loading {
+					opacity: 0.7;
+				}
+
+				.components-spinner {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+				}
+			}
+
+			h4 {
+				font-family: $evbg-lato;
+				color: $fortress;
+				font-weight: bold;
+				font-size: 22px;
+				margin: 0 auto;
+			}
+			p {
+				color: $fortress;
+				font-size: 16px;
+				font-weight: 300;
+				margin: 8px auto 5px auto;
+			}
+		}
+	}
+}

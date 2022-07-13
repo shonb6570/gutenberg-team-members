@@ -1,0 +1,124 @@
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+.wp-block-evbg-team-members {
+  display: block;
+}
+.wp-block-evbg-team-members.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .wp-block-evbg-team-members.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wp-block-evbg-team-members.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+    width: calc(100% / 1 - 20px);
+  }
+}
+.wp-block-evbg-team-members.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+  width: calc(100% / 1);
+  border: 1px dashed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 290px;
+}
+.wp-block-evbg-team-members.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .wp-block-evbg-team-members.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wp-block-evbg-team-members.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+    width: calc(100% / 2 - 20px);
+  }
+}
+.wp-block-evbg-team-members.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+  width: calc(100% / 2);
+  border: 1px dashed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 290px;
+}
+.wp-block-evbg-team-members.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .wp-block-evbg-team-members.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wp-block-evbg-team-members.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+    width: calc(100% / 3 - 20px);
+  }
+}
+.wp-block-evbg-team-members.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+  width: calc(100% / 3);
+  border: 1px dashed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 290px;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout [data-type="evbg/team-member"] {
+  max-width: none;
+  margin: 0;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] {
+  margin: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] .block-editor-media-placeholder {
+  margin-bottom: 20px;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] .wp-block-evbg-team-member-img {
+  position: relative;
+  margin-bottom: 20px;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] .wp-block-evbg-team-member-img.is-loading {
+  opacity: 0.7;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] .wp-block-evbg-team-member-img .components-spinner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] h4 {
+  font-family: "lato", sans-serif;
+  color: #292d2f;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0 auto;
+}
+.wp-block-evbg-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="evbg/team-member"] p {
+  color: #292d2f;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 8px auto 5px auto;
+}
+
+/*# sourceMappingURL=index.css.map*/
